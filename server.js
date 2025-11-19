@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./src/config/db');
+const produtoRoutes = require('./src/routes/produtoRoutes');
+const authRoutes = require('./src/routes/authRoutes');
+const userRoutes = require('./src/routes/userRoutes');
 
 const app = express();
 
@@ -12,10 +15,10 @@ app.use(express.json());
 // Connect to MongoDB
 connectDB();
 
-// Basic route
-app.get('/', (req, res) => {
-  res.send('API is running...');
-});
+// Rotas
+app.use('/auth', authRoutes);
+app.use('/api/v1/produtos', produtoRoutes);
+app.use('/api/v1/usuarios', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
