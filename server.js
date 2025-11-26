@@ -7,6 +7,7 @@ const authRoutes = require('./src/routes/authRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const agendaRoutes = require('./src/routes/agendaRoutes');
 const mongoose = require("mongoose");
+const apidocsRouter = require('./src/routes/apidocRouter');
 
 const app = express();
 
@@ -24,7 +25,7 @@ mongoose.connect(url);
 app.use('/auth', authRoutes);
 app.use('/api/v1/produtos', produtoRoutes);
 app.use('/api/v1/usuarios', userRoutes);
-app.use('/api/v1/agenda', agendaRoutes);
+app.use('/api-docs', apidocsRouter);
 
 const PORT = process.env.PORT || 5000;
 

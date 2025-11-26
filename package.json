@@ -16,13 +16,17 @@
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.20.1",
+    "mongoose": "^8.20.0",
     "swagger-ui-express": "^5.0.1",
-    "yaml": "^2.8.1"
+    "yaml": "^2.8.1",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "jest": "^30.2.0",
     "nodemon": "^3.1.11",
+    "mongoose": "^8.20.1",
+    "swagger-ui-express": "^5.0.1",
+    "yaml": "^2.8.1",
+    "jest": "^30.2.0",
     "supertest": "^7.1.4"
   }
 }
